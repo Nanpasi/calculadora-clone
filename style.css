@@ -1,0 +1,90 @@
+body {
+    /*Removendo a margem padrão do body*/
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*Sem isso, a calculadora não fica centralizada verticalmente, pois o body só ocupa espaço que está realmente sendo usado*/
+    /*Obrigando o body a usar 100% da tela verticalmente*/
+    height: 100vh;
+
+    background-color: hsl(0, 0%, 75%);
+}
+
+#calculadora {
+    font-family: Arial, sans-serif;
+    
+    background-color: hsl(0, 0%, 15%);
+
+    border-radius: 15px;
+
+    max-width: 500px;
+
+    /*Esconde o conteúdo caso ele saia do contêiner*/
+    overflow: hidden;
+
+    box-shadow: 15px 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+#tela {
+    width: 100%;
+    padding: 20px;
+
+    font-size: 5rem;
+
+    text-align: left;
+
+    border: none;
+
+    background-color: hsl(0, 0%, 20%);
+
+    color: white;
+}
+
+#teclas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50px;
+    border: none;
+
+    background-color: hsl(0, 0%, 30%);
+
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+ 
+    /*cursor: muda o cursor do mouse*/
+    cursor: pointer;
+
+    transition: ease 0.05s;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 50%);
+    transform: scale(1);
+}
+
+.operador-botao {
+    background-color: hsl(35, 100%, 55%);
+}
+.operador-botao:hover {
+    background-color: hsl(35, 100%, 65%);
+}
+.operador-botao:active {
+    background-color: hsl(35, 100%, 75%);
+}
